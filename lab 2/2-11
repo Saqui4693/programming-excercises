@@ -1,0 +1,24 @@
+# assign variables
+lions = 0.0
+tigers = 0.0
+percent_lions = 0.0
+percent_tigers = 0.0
+
+#get the number of lions
+lions = int(input("Enter the number of lions: "))
+
+#get the number of tigers
+tigers = int(input("Enter the number of tigers: "))
+
+#calculate the total number of cats
+total = lions + tigers
+
+#calculate the percentage of lions
+percent_lions = lions / total
+
+#calculate the percent of tigers
+percent_tigers = tigers / total
+
+#print the percents
+print(f"Lions: {percent_lions:.2%}")
+print(f"Tigers: {percent_tigers:.2%}")

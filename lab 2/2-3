@@ -1,0 +1,11 @@
+#assign variables
+tractSize = 0.0
+acres = 0.0
+#constants for the number of sqft in an acre.
+SQ_FEET_PER_ACRE = 43560
+#get the sqft in the tract
+tractSize = input("Enter the name of square feet in the tract: ")
+#calculate the acreage.
+acres = float(tractSize) / SQ_FEET_PER_ACRE
+#print the number of acres
+print(f"The size of that tract is {acres:.2f} acres.")

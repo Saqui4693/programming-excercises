@@ -1,0 +1,9 @@
+#assign variables to sales total and the profit
+salesTotal = 0.0
+profit = 0.0
+#get amount of projected sales.
+salesTotal = float(input("Enter the projected sales: "))
+#calculate the projected profit
+profit = salesTotal * 0.23
+#print the projected profit
+print(f"the projected profit is {profit:.2f}")

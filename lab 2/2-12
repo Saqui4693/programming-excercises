@@ -1,0 +1,43 @@
+# assign constants
+COMMISSION_RATE = 0.03
+NUM_SHARES = 2000
+PURCHASE_PRICE = 40.0
+SELLING_PRICE = 42.75
+
+# assign variables
+amountPaidForStock = 0.0
+purchaseCommission = 0.0
+totalPaid = 0.0
+stockSoldFor = 0.0
+sellingCommission = 0.0
+totalReceived = 0.0
+profitOrLoss = 0.0
+
+#calculate the amount that joe paid for the stock
+# not including commission
+amountPaidForStock = NUM_SHARES * PURCHASE_PRICE
+
+#calculate the amount of commission that joe paid his broker
+purchaseCommission = COMMISSION_RATE * amountPaidForStock
+
+#total amount joe paid for the stock plus the commission
+totalPaid = amountPaidForStock + purchaseCommission
+
+# calculate the amount that joe sold the stock for
+stockSoldFor = NUM_SHARES * SELLING_PRICE
+
+#calculate the amount of commission that joe paid his broker
+sellingCommission = COMMISSION_RATE * stockSoldFor
+
+#calculate the amount of money left over, after joe paid his broker
+totalReceived = stockSoldFor - sellingCommission
+
+#calculate the amount of profit or loss
+profitOrLoss = totalReceived - totalPaid
+
+#print the data
+print(f"Amount paid for the stock: ${amountPaidForStock:,.2f}")
+print(f"Commisiion paid on the purchase: ${purchaseCommission:,.2f}")
+print(f"Amount the stock sold for: ${stockSoldFor:,.2f}")
+print(f"Commission paid on the sale: ${sellingCommission:,.2f}")
+print(f"Profit (or loss if negative): ${profitOrLoss:,.2f}")

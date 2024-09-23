@@ -1,0 +1,9 @@
+# assign variables
+celsius = 0.0
+fahrenheit = 0.0
+# get the C temp
+celsius = float(input("Enter a celsius temperature: "))
+# calculate the fahrenheit equiv
+fahrenheit = (9.0 / 5.0) * celsius + 32
+#display fahrenheit
+print (f"That is equal to {fahrenheit:.2f} degrees Fahrenheit")

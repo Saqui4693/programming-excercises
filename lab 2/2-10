@@ -1,0 +1,29 @@
+# assign variables
+cookies = 0.0
+sugar = 0.0
+butter = 0.0
+flour = 0.0
+
+# assign constants 
+COOKIES_RECIPE = 48.0
+SUGAR_RECIPE = 1.5
+BUTTER_RECIPE = 1.0
+FLOUR_RECIPE = 2.75
+
+# get the number of cookies
+cookies = float(input("Enter the number of cookies: "))
+
+#calculate the cups of sugar needed
+sugar = (cookies * SUGAR_RECIPE) / COOKIES_RECIPE
+
+#calculate the cups of butter needed
+butter = (cookies * BUTTER_RECIPE) / COOKIES_RECIPE
+
+#calculate the cups of flour needed
+flour = (cookies * FLOUR_RECIPE) / COOKIES_RECIPE
+
+#print the amount of butter, sugar, and flour needed
+print(f"To make {cookies} cookies, you will need:")
+print(f"{sugar:.2f} cups of sugar")
+print(f"{butter:.2f} cups of butter")
+print(f"{flour:.2f} cups of flour")
