@@ -1,0 +1,24 @@
+# assign variables
+HOT_DOG = 10
+HOT_DOG_BUNS = 8
+# ask user for how many people are attending
+people = int(input("Enter the number of people attending the cookout: "))
+hotdog_per_person = int(input("How many hotdogs will each person recieve: "))
+
+#calculate how many hotdogs are needed
+totalHotDogsNeeded = people * hotdog_per_person
+
+#calculate how many hot dogs are needed
+hot_dogs_needed = (totalHotDogsNeeded + HOT_DOG -1) // HOT_DOG
+hot_dogs_buns_needed = (totalHotDogsNeeded + HOT_DOG_BUNS -1)// HOT_DOG_BUNS
+
+#check for leftovers
+leftover_hotdogs = hot_dogs_needed * HOT_DOG - totalHotDogsNeeded
+leftover_buns = hot_dogs_buns_needed * HOT_DOG_BUNS - totalHotDogsNeeded
+
+#display results
+print(f"The minimum number of hotdogs required: {totalHotDogsNeeded}")
+print(f"The minimum number of packages of hotdogs required: {hot_dogs_needed}")
+print(f"The minimum number of packages of hotdog buns required: {hot_dogs_buns_needed}")
+print(f"The number of hotdogs left over: {leftover_hotdogs}")
+print(f"The number of hotdog buns left over: {leftover_buns}")

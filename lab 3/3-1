@@ -1,0 +1,21 @@
+# ask suser for number between 1 and 7
+day_number = int(input("Enter a number 1-7 to get a day of the week: "))
+
+# assign number to day
+if day_number == 1:
+    print("The day of the week is Monday")
+elif day_number == 2:
+    print("The day of the week is Tuesday")
+elif day_number == 3:
+    print("The day of the week is Wednesday")
+elif day_number == 4:
+    print("The day of the week is Thursday")
+elif day_number == 5:
+    print("The day of the week is Friday")
+elif day_number == 6:
+    print("The day of the week is Saturday")
+elif day_number == 7:
+    print("The day of the week is Sunday")
+else:
+    # display error if number isnt 1-7
+    print("Error: Please enter a number between 1 and 7.")

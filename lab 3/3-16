@@ -1,0 +1,18 @@
+# reboot the computer and try to connect
+response = input("Reboot the computer and try to connect. Did that fix the problem?(yes?no): ")
+if response == "yes":
+    print("problem is solved")
+else:
+    response = input("reboot the router and try to connect. Did that fix the problem?(yes?no): ")
+    if response == "yes":
+        print("problem is solved")
+    else: 
+        response = input("make sure the cables between the router & modem are plugged in firmly.Did that fix the problem?(yes/no): ")
+        if response == "yes":
+           print("problem is solved")
+        else:
+            response = input("move the router to a new location and try to connect.Did that fix the problem?(yes/no): ")
+            if response == "yes":
+                print("problem is solved")
+            else:
+                print("get a new router")

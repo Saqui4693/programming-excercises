@@ -1,0 +1,17 @@
+#find dietary restrictions
+vegetarian = input("is anyone in the group vegetarian?: ")
+vegan = input("is anyone in the group vegan?: ")
+gluten_free = input("is anyone in the group gluten free?: ")
+
+#display restraunts based on restrictions
+if vegetarian == "no" and vegan == "no" and gluten_free == "no":
+        print("Joe's Gourmet Burgers")
+    
+elif vegetarian == "yes" and vegan == "no" and gluten_free == "yes":
+        print("Main St. Pizza Company")
+elif vegetarian == "yes" and vegan == "yes" and gluten_free == "yes":
+        print("Corner Café")
+        print("The Chef's Kitchen")
+elif vegetarian == "yes" and vegan == "no" and gluten_free == "no":
+        print("Mama's Fine Italian")
+    

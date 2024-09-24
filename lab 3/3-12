@@ -1,0 +1,26 @@
+#ask user how many packages they purchased
+quantity = int(input("Enter how many packages were purchased: "))
+
+#assign variable
+PACKAGE_PRICE = 99
+# do they qualify for a discount
+if quantity >= 10 and quantity <=19:
+    Discount = 0.10
+elif quantity >=20 and quantity <=49:
+    discount = .20
+elif quantity >= 50 and quantity <=99:
+    discount = .30
+elif quantity >+ 100:
+    discount = .40
+else:
+    discount =  0.0
+
+#calculate discount
+discount_amount = quantity *PACKAGE_PRICE * discount
+
+#total cost after discount
+total_cost = (quantity * PACKAGE_PRICE)- discount_amount
+
+#display results
+print(f"Discount: ${discount_amount:.2f}")
+print(f"Total cost after discount: ${total_cost:.2f}")

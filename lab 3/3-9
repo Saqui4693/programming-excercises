@@ -1,0 +1,32 @@
+#ask user for a number 0-36
+pocket = int(input("Enter a pocket number between 0 and 36: "))
+
+#make sure number is valid
+if pocket < 0 or pocket > 36:
+    print("Error: please enter a number between 0 and 36.")
+else:
+    if pocket == 0:
+        color = "green"
+    elif pocket >= 1 and pocket <=10:
+        if pocket % 2 == 0:
+            color = "black"
+        else:
+            color = "red"
+    elif pocket >=11 and pocket <= 28:
+        if pocket % 2 == 0:
+            color = "red"
+        else:
+            color = "black"
+    elif pocket >=19 and pocket <= 28:
+        if pocket % 2 == 0:
+            color = "black"
+        else:
+            color = "red"
+    elif pocket >=29 and pocket <=36:
+        if pocket % 2 == 0:
+            color = "black"
+        else:
+            color = "red"
+
+#display result
+print(f"the color of the pocket {pocket} is {color}.")

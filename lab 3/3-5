@@ -1,0 +1,13 @@
+#ask user for object mass
+obj_mass = int(input("Please enter the object's mass: "))
+
+#calculate weight
+weight = (obj_mass * 9.8) #in newtons
+
+#display result
+if weight > 500:
+    print("The object is too heavy")
+elif weight < 100:
+    print("The obhect is too light")
+else:
+    print(f"the Object weighs {weight:.0f} newtons.")

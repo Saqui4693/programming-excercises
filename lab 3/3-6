@@ -1,0 +1,11 @@
+# ask user to enter month,day,and two digit year
+#numeric form
+month = int(input("Enter the month: "))
+day = int(input("Enter the day: "))
+year = int(input("Enter the two-digit year: "))
+
+#find out if the date is magic
+if month * day == year:
+    print("the date is magic.")
+else:
+    print("The date is not magic.")

@@ -1,0 +1,20 @@
+#intro
+print("welcome to money counting game!")
+print("enter the number of coins to make exactly one dollar.")
+
+#get input from user
+pennies = int(input("How many pennies? "))
+nickels = int(input("How many nickels? "))
+dimes = int(input("How many dimes? "))
+quarters = int(input("how many quarters? "))
+
+#equation for total value
+total_value = (pennies * 0.01) + (nickels * 0.05) + (dimes * 0.10) + (quarters * 0.25)
+
+#does it equal one dollar
+if total_value == 1.00:
+    print("Congratulations! you've made exactly one dollar")
+elif total_value <1.00:
+    print("That's less than a dollar")
+else:
+    print("that's more than a dollar")

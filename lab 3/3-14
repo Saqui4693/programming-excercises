@@ -1,0 +1,23 @@
+# ask for number of seconds
+total_seconds = int(input("Enter the number of seconds: "))
+
+#is it days
+if total_seconds >= 86400:
+    days= total_seconds// 86400
+    total_seconds %= 86400
+    print(f"{days} day(s)")
+
+# hours
+if total_seconds >= 3600:
+    hours = total_seconds//3600
+    total_seconds %= 3600
+    print(f"{hours} hour(s)")
+
+#minutes
+if total_seconds >= 60:
+    minutes = total_seconds//60
+    total_seconds %= 60
+    print(f"{minutes} minute(s)")
+
+#remaining sec
+print(f"{total_seconds} second(s)")

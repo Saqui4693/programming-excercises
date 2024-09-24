@@ -1,0 +1,15 @@
+#ask for weight of package
+weight = float(input("Enter the weight of your package: "))
+
+#assign shiiping charge to weight
+if weight <= 2:
+    shipping_charge = 1.50
+elif weight <=6:
+    shipping_charge = 3.00
+elif weight <=10:
+    shipping_charge = 4.00
+else:
+    shipping_charge = 4.75
+
+#display result
+print(f"The shipping charge for a package weighing {weight} pounds is: ${shipping_charge:.2f}")

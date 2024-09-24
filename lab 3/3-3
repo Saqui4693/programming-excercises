@@ -1,0 +1,12 @@
+# ask user to eter a person's age
+age = int(input("Please enter the age of the person you want to classify: "))
+
+#display whether the person is an infant, teen, or adult
+if age <= 1:
+    print("This person is an infant.")
+elif age < 13:
+    print("This person is a child.")
+elif age >= 13 and age < 20:
+    print("This person is a teenager.")
+else:
+    print("This person is an adult.")

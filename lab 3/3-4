@@ -1,0 +1,26 @@
+# askthe user to enter a number 1-10
+number = int(input("Enter a number between 1 and 10: "))
+
+# assign number to numeral
+if number == 1:
+    print("The Roman numeral is I.")
+elif number == 2:
+    print("The Roman numeral is II.")
+elif number == 3:
+    print("The Roman numeral is III.")
+elif number == 4:
+    print("The Roman numeral is IV.")
+elif number == 5:
+    print("The Roman numeral is V.")
+elif number == 6:
+    print("The Roman numeral is VI.")
+elif number == 7:
+    print("The Roman numeral is VII.")
+elif number == 8:
+    print("The Roman numeral is VIII.")
+elif number == 9:
+    print("The Roman numeral is IX.")
+elif number == 10:
+    print("The Roman numeral is X.")
+else: #display error if not between 1-10
+    print("Error: Please enter a number between 1 and 10.")

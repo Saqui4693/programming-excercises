@@ -1,0 +1,19 @@
+# Ask for two colors (no need to convert input to int, we need strings)
+color1 = input("Enter the first primary color (red, blue, or yellow): ")
+color2 = input("Enter the second primary color (red, blue, or yellow): ")
+
+# Check if the input colors are valid primary colors
+if (color1 == "red" or color1 == "blue" or color1 == "yellow") and \
+   (color2 == "red" or color2 == "blue" or color2 == "yellow"):
+
+    # Determine the result of mixing the colors
+    if (color1 == "red" and color2 == "blue") or (color1 == "blue" and color2 == "red"):
+        print("Mixing red and blue gives you purple")
+    elif (color1 == "red" and color2 == "yellow") or (color1 == "yellow" and color2 == "red"):
+        print("Mixing red and yellow gives you orange")
+    elif (color1 == "blue" and color2 == "yellow") or (color1 == "yellow" and color2 == "blue"):
+        print("Mixing blue and yellow gives you green")
+else:
+    # Show error if invalid input
+    print("Error: Please enter two valid primary colors (red, blue, yellow).")
+

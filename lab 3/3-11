@@ -1,0 +1,19 @@
+#ask user to enter number of books he/she purchased this month
+books_purchased = int(input("Enter the number of books purchased this month: "))
+
+#calculate number of points
+if books_purchased == 0:
+    point = 0
+elif books_purchased == 2:
+    point = 5
+elif books_purchased == 4:
+    points = 15
+elif books_purchased == 6:
+    points = 30
+elif books_purchased >= 8:
+    points = 60
+else:
+    point = 0
+
+#display points
+print(f"you have earned {points} for purchasing {books_purchased} books!")

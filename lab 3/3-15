@@ -1,0 +1,8 @@
+#ask user for year
+year = int(input("Enter a year: "))
+
+#check if it is a leap year
+if (year % 100 == 0 and year % 400 == 0) or (year % 100 != 0 and year % 4 ==0):
+    print(f"February in {year} has 29 days.")
+else:
+    print(f"February in {year} has 28 days.")
