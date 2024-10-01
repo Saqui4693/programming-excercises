@@ -1,0 +1,24 @@
+#hold constants
+total_rainfall = 0
+total_months = 0
+
+#ask the user for number of years
+years = int(input("Enter the number of years: "))
+
+#loop for each year
+for year in range (1,years+1):
+    print(f"Year {year}: ")
+    #loop for months
+    for month in range (1,13):
+        rainfall = float(input(f"Enter the rainfall in inches for month {month}: "))
+
+        #add rainfall for month to the total
+        total_rainfall += rainfall
+    total_months += 12
+#average rainfall per month
+average_rainfall = total_rainfall/total_months
+
+#show results
+print(f"Total number of months: {total_months}")
+print(f"Total inches of rainfall: {total_rainfall:.2f}")
+print(f"Average rainfall per month: {average_rainfall:.2f} inches.")

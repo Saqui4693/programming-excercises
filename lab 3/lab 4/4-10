@@ -1,0 +1,7 @@
+#set constant
+tuition = 8000
+
+#create loop
+for year in range(1,6):
+    print(f"Year {year}: ${tuition:.2f}")
+    tuition *= 1.03
