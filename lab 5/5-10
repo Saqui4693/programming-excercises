@@ -1,0 +1,39 @@
+import random
+#main function
+def main():
+    #local variables
+    num1 = 0 
+    num2 = 0
+    correctAnswer = 0
+    userAnswer = 0
+
+    #get numbers
+    num1 = random.randint(0, 999)
+    num2 = random.randint(0, 999)
+    #display math problem
+    displayProblem(num1,num2)
+    #get user answer
+    userAnswer = getAnswer()
+    #calculate the corret answer
+    correctAnswer = num1 +num2
+
+    #display result
+    showResult(correctAnswer,userAnswer)
+
+
+def displayProblem(num1,num2):
+    print (f'{num1:5}')
+    print(f'+{num2:4}')
+#getanswer function gets and returns user answer
+def getAnswer():
+    inputAnswer = int(input('Enter sum of numbers: '))
+    return inputAnswer
+#showresult function tells if user answer is correct or not
+def showResult(correctAnswer,answer):
+    if correctAnswer ==  answer:
+        print ('Correct answer - Good work!')
+    else:
+        print(f'Incorrect... The correct answer is: {correctAnswer}')
+#call main function
+main()
+

@@ -1,0 +1,35 @@
+#create constants for state and county tax
+STATE_TAX_RATE = 0.05
+COUNTY_TAX_RATE = 0.025
+
+#main def
+def main():
+    #local variables
+    purchase = 0.0
+    stateTax = 0.0
+    countyTax = 0.0
+
+    #get the purchasing amount
+    purchase = float(input("Enter the purchase amount: "))
+    #claculate the state tax
+    stateTax = purchase * STATE_TAX_RATE
+    #calculate county tax
+    countyTax = purchase * COUNTY_TAX_RATE
+    #print info about the sale
+    showSale(purchase, stateTax, countyTax)
+#total sale info
+def showSale (purchase, stateTax, countyTax):
+    #local variables
+    totalTax = 0.0
+    totalSale = 0.0
+    totalTax = stateTax + countyTax
+    totalSale = purchase + totalTax
+    #print results
+    print (f"Purchase amount: {purchase:.2f}")
+    print (f"State tax: {stateTax:.2f}")
+    print (f"County tax: {countyTax:.2f}")
+    print (f"Total tax: {totalTax:.2f}")
+    print (f"Sale total: {totalSale:.2f}")
+#call the main function
+main()
+

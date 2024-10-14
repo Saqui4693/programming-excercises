@@ -1,0 +1,25 @@
+#constant for the percent of replacement cost
+REPLACE_PERCENT = 0.8
+
+#main def
+def main():
+    #local variables
+    replace = 0.0 
+    minInsure = 0.0
+
+    #get the replacement cost
+    replace = float (input("Enter the replacement amount: "))
+
+    #calculate the insurance amount
+    minInsure = replace * REPLACE_PERCENT
+
+    #print info about insurance
+    showInsurance(replace, minInsure)
+
+#display transaction info
+def showInsurance (replace, minInsurance):
+    print (f"Replacement cost: ${replace:.2f}")
+    print (f"Percent insured: {REPLACE_PERCENT:.2f}")
+    print (f"Minimum insurance: ${minInsurance:.2f}")
+# call main function
+main()

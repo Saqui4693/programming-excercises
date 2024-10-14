@@ -1,0 +1,45 @@
+#main module
+def main():
+    #local variables
+    laon = 0.0
+    insurance = 0.0
+    gas = 0.0
+    oil = 0.0
+    tires = 0.0
+    maintenance = 0.0
+
+    #get the amount of loan payment
+    loan = float(input("Enter the monthly loan amount: "))
+
+    #get the amount of insurance
+    insurance = float(input("Enter the monthly insurance amount: "))
+
+    #get the amount of gas
+    gas = float(input("Enter the monthly gas amount: "))
+
+    #get the amount of oil
+    oil = float(input("Enter the monthly oil amount: "))
+
+    #get the tire amount
+    tires = float(input("Enter the monthly tire amount: "))
+
+    #Get the amount for maintenance
+    maintenance = float(input("Enter the monthly maintenance amount: "))
+
+    #print the info about the vehicle
+    showExpenses(loan,insurance,gas,oil,tires,maintenance)
+#accepts variables as arguements
+def showExpenses(loan,insurance,gas,oil,tires,maintenance):
+    #local variables
+    totalMonth = 0.0
+    totalYear = 0.0
+    totalMonth = loan + insurance + gas + oil + tires + maintenance
+    totalYear = totalMonth *12
+
+    #print monthly and annual information
+    print (f"Total monthly expense: ${totalMonth:.2f}")
+    print (f"Total annual expense: ${totalYear:.2f}")
+#call main function
+main()
+    
+    

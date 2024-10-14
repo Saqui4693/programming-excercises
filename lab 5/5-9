@@ -1,0 +1,16 @@
+#main function
+def main():
+    #local variable
+    feet = 0.0
+    inches = 0.0
+    #get the number of feet from user
+    feet = float(input('Enter the number of feet: '))
+
+    #display the corresponding number of inches
+    inches = feet_to_inches(feet)
+    print(f'{feet} feet = {inches} inches')
+
+def feet_to_inches(feet):
+    return 12*feet
+#call main function
+main()
