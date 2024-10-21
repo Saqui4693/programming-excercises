@@ -1,0 +1,10 @@
+#open file
+myfile = open('numbers.txt','r')
+
+# read and display the file's contents
+for line in myfile:
+    number = int(line)
+    print(number)
+
+#close the file
+myfile.close()

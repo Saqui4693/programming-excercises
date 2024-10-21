@@ -1,0 +1,15 @@
+#open the file in read mode
+file = open('numbers.txt','r')
+
+#variable to store the total
+total = 0
+
+#read each line
+for line in file:
+    total += int(line.strip())
+
+#close the file
+file.close()
+
+#display the total
+print(f'The total of all numbers is: {total}.')

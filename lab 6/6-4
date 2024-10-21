@@ -1,0 +1,15 @@
+#open file in read
+file = open('names.txt','r')
+
+#counter for the names
+count = 0
+
+#read each line
+for line in file:
+    count += 1
+
+#close the file
+file.close()
+
+#display the names
+print(f'The number of names in the file is:{count}')

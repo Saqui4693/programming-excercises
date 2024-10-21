@@ -1,0 +1,16 @@
+#ask user for name of file
+filename = input('Enter the name of the file: ')
+
+try:
+    #open the file in read mode
+    file = open(filename,'r')
+
+    #read each line
+    line_number = 1
+    for line in file:
+        print(f'{line_number}: {line.strip()}')
+        line_number += 1
+
+    file.close()
+except FileNotFoundError:
+    print('File not found.')

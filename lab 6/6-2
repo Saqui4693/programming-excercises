@@ -1,0 +1,17 @@
+#ask the user for the name of file
+filename = input('Enter the name of the file: ')
+
+try:
+    #open file in read mode
+    file = open(filename, 'r')
+
+    #loop for the first 5 lines
+    for i in range(5):
+        line = file.readline()
+        if line == '':
+            break
+        print(line.strip())
+
+    file.close()
+except FileNotFoundError:
+    print('File not found.')
