@@ -1,0 +1,13 @@
+#set constant
+total_sum = 0
+
+#create loop 
+while True:
+    number = float(input("Enter a positive number (or a negative number to stop): "))
+    if number <0:
+        break
+    else:
+        total_sum += number
+
+#display result
+print("The sum of the positive numbers is:",total_sum)

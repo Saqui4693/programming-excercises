@@ -1,0 +1,48 @@
+#constants for stadium seating
+CLASS_A_SEATS = 20
+CLASS_B_SEATS = 15
+CLASS_C_SEATS = 10
+
+#main module
+def main ():
+    #local variables
+    countAseats = 0
+    countBseats = 0
+    countCseats = 0
+    incomeAseats = 0.0
+    incomeBseats = 0.0
+    incomeCseats = 0.0
+
+    #get A count
+    countAseats = int(input("Enter count of A seats: "))
+
+    #get B count
+    countBseats = int(input("Enter count of B seats: "))
+
+    #get C count
+    countCseats = int(input("Enter count of C seats: "))
+
+    #calculate A income
+    incomeAseats = countAseats * CLASS_A_SEATS
+    #calculate B income
+    incomeBseats = countBseats * CLASS_B_SEATS
+    #calculate C income
+    incomeCseats = countCseats *CLASS_C_SEATS
+
+    #print income
+    showIncome(incomeAseats,incomeBseats,incomeCseats)
+
+def showIncome(incomeAseats,incomeBseats,incomeCseats):
+    #local variable
+    totalIncome = 0.0
+
+    #calculate total income
+    totalIncome = incomeAseats +incomeBseats + incomeCseats
+
+    #show results
+    print (f"Income from class A seats: ${incomeAseats:,.2f}")
+    print (f"Income from class B seats: ${incomeBseats:,.2f}")
+    print (f"Income from class C seats: ${incomeCseats:,.2f}")
+    print (f"Total income: ${totalIncome:,.2f}")
+#call main function
+main()

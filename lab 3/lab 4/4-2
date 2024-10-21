@@ -1,0 +1,9 @@
+#set constant
+calories_per_minute = 4.2
+
+#make loop for minutes
+for minutes in range(10,35,5):
+    calories_burned= calories_per_minute * minutes
+
+#show results
+print(f"Calories burned after {minutes} minutes: {calories_burned:.1f}")

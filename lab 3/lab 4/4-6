@@ -1,0 +1,10 @@
+#create table
+print("Celsius    Fahrenheit")
+print("---------------------")
+
+#make loop for celsius values
+for celsius in range (0, 21):
+    fahrenheit =(9/5)*celsius +32
+
+#display results
+print(f"{celsius}\t{fahrenheit:.2f}")

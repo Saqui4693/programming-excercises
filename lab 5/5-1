@@ -1,0 +1,22 @@
+#create constant for conversion
+KILOMETERS_TO_MILES = 0.6124
+
+#main def
+def main():
+    #local varriables
+    mykilometers = 0.0
+
+    #get distance inn kilometers
+    mykilometers  = float(input("Enter the distance in kilometers: "))
+
+    #print miles
+    showMiles(mykilometers)
+
+def showMiles(kilometers):
+    #declare local variables
+    miles = 0.0
+    miles = kilometers * KILOMETERS_TO_MILES
+    print (f"The conversion of {kilometers:.2f} kilometers")
+    print (f"to miles is {miles:.2f} miles.")
+#call the main function
+main()

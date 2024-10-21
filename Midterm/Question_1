@@ -1,0 +1,20 @@
+#read data from the file
+with open('grades.txt','r') as grades_file:
+    grades =[]
+    for line in grades_file:
+        name, grade = line.split()
+        grades.append(int(grade))
+
+#calculating the average grade
+average_grade = sum(grades) / len(grades)
+
+#count the numbers of students who
+#scored above average
+above_average_students = sum(1 for grade in grades if grade > average_grade )
+
+#write the average and the count of above average students
+#to a file names result.txt
+with open('results.txt','w') as result_file:
+    result_file.write(f'Average grade:{average_grade:.2f}')
+    result_file.write(f'Number of students above average:{above_average_students}')
+

@@ -1,0 +1,29 @@
+#contants for property tax
+ASSES_PERCENT = 0.6
+PROPERTY_TAX_PERCENT = 0.0072
+
+#main function
+def main():
+    #local variables
+    actualValue = 0.0
+    assesValue = 0.0
+    propertyTax = 0.0
+
+    #get the actual value
+    actualValue = float(input("Enter  the actual value: "))
+
+    #calculate the assesed value
+    assesValue = actualValue * ASSES_PERCENT
+
+    #calculate the property tax
+    propertyTax = assesValue * PROPERTY_TAX_PERCENT
+
+    #print info about property tax
+    showPropertyTax(assesValue,propertyTax)
+
+#display the property tax info
+def showPropertyTax(assesValue,propertyTax):
+    print (f"Assesed value: ${assesValue:,.2f}")
+    print (f"Property tax: ${propertyTax:,.2f}")
+#call main function
+main()

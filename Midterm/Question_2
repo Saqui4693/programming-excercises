@@ -1,0 +1,10 @@
+#read a list of integers
+def transform_data(int_list):
+    squared_list = []
+    for num in int_list:
+        squared_list.append(num**2)
+
+    #calculate the sum of the square values
+    sum_squares = sum(squared_list)
+    #return both new list and sum
+    return squared_list, sum_squares

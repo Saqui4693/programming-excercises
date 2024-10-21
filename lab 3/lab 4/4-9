@@ -1,0 +1,10 @@
+#set constant
+yearly_rise = 1.6 #millimeters
+
+#create loop
+for year in range (1,26):
+    total_rise = year * yearly_rise
+#make header
+print("Year    Ocean level rise(mm)")
+print("----------------------------")
+print(f"{year:<6} {total_rise:.1f}")
