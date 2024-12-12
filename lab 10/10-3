@@ -1,0 +1,58 @@
+# PersonalInfo class
+class PersonalInfo:
+    def __init__(self, name, address, age):
+        self.__name = name
+        self.__address = address
+        self.__age = age
+
+    # Accessor methods
+    def get_name(self):
+        return self.__name
+
+    def get_address(self):
+        return self.__address
+
+    def get_age(self):
+        return self.__age
+
+    def get_phone_number(self):
+        return self.__phone_number
+
+    # Mutator methods
+    def set_name(self, name):
+        self.__name = name
+
+    def set_address(self, address):
+        self.__address = address
+
+    def set_age(self, age):
+        self.__age = age
+
+# Program to demonstrate the PersonalInfo class
+def main():
+    # Create three instances of the PersonalInfo class with fictional information
+    person1 = PersonalInfo("michael myers", "456 Elm St, nightmare", 30)
+    person2 = PersonalInfo("billy loomis", "789 Oak St, woodsboro", 25)
+    person3 = PersonalInfo("norman bates", "123 Maple St, Springfield", 35)
+
+    # Display the information for each person
+    print("Person 1:")
+    print("Name:", person1.get_name())
+    print("Address:", person1.get_address())
+    print("Age:", person1.get_age())
+    print()
+
+    print("Person 2:")
+    print("Name:", person2.get_name())
+    print("Address:", person2.get_address())
+    print("Age:", person2.get_age())
+    print()
+
+    print("Person 3:")
+    print("Name:", person3.get_name())
+    print("Address:", person3.get_address())
+    print("Age:", person3.get_age())
+
+# Run the program
+if __name__ == "__main__":
+    main()

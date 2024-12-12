@@ -1,0 +1,154 @@
+from datetime import date
+
+#patient class
+class Patient:
+    def __init__(self, first_name, middle_name, last_name, address, city, state, zip_code, phone_number, emergency_contact_name, emergency_contact_phone):
+        self.__first_name =first_name
+        self.__middle_name =middle_name
+        self.__last_name =last_name
+        self.__address =address
+        self.__city =city
+        self.__state =state
+        self.__zip_code =zip_code
+        self.__phone_number =phone_number
+        self.__emergency_contact_name =emergency_contact_name
+        self.__emergency_contact_phone =emergency_contact_phone
+
+    #accessors
+    def get_first_name(self):
+        return self.__first_name
+
+    def get_middle_name(self):
+        return self.__middle_name
+
+    def get_last_name(self):
+        return self.__last_name
+
+    def get_address(self):
+        return self.__address
+
+    def get_city(self):
+        return self.__city
+
+    def get_state(self):
+        return self.__state
+
+    def get_zip_code(self):
+        return self.__zip_code
+
+    def get_phone_number(self):
+        return self.__phone_number
+
+    def get_emergency_contact_name(self):
+        return self.__emergency_contact_name
+
+    def get_emergency_contact_phone(self):
+        return self.__emergency_contact_phone
+
+    #mutators
+    def set_first_name(self, first_name):
+        self.__first_name = first_name
+
+    def set_middle_name(self, middle_name):
+        self.__middle_name = middle_name
+
+    def set_last_name(self, last_name):
+        self.__last_name = last_name
+
+    def set_address(self, address):
+        self.__address = address
+
+    def set_city(self, city):
+        self.__city = city
+
+    def set_state(self, state):
+        self.__state = state
+
+    def set_zip_code(self, zip_code):
+        self.__zip_code = zip_code
+
+    def set_phone_number(self, phone_number):
+        self.__phone_number = phone_number
+
+    def set_emergency_contact_name(self, emergency_contact_name):
+        self.__emergency_contact_name = emergency_contact_name
+
+    def set_emergency_contact_phone(self, emergency_contact_phone):
+        self.__emergency_contact_phone = emergency_contact_phone
+
+#procedure class
+class Procedure:
+    def __init__(self, procedure_name, date, practitioner, charges):
+        self.__procedure_name = procedure_name
+        self.__date = date
+        self.__practitioner = practitioner
+        self.__charges = charges
+
+    #accessors
+    def get_procedure_name(self):
+        return self.__procedure_name
+
+    def get_date(self):
+        return self.__date
+
+    def get_practitioner(self):
+        return self.__practitioner
+
+    def get_charges(self):
+        return self.__charges
+
+    #mutators
+    def set_procedure_name(self, procedure_name):
+        self.__procedure_name =procedure_name
+
+    def set_date(self, date):
+        self.__date =date
+
+    def set_practitioner(self, practitioner):
+        self.__practitioner =practitioner
+
+    def set_charges(self, charges):
+        self.__charges =charges
+
+#program
+def main():
+    #instances
+    patient = Patient("John", "A", "Doe", "123 Main St", "Anytown", "CA", "12345", "555-1234", "Jane Doe", "555-5678")
+
+    #create 3 instances
+    procedure1 = Procedure("Physical Exam", date.today(), "Dr. Irvine", 250.00)
+    procedure2 = Procedure("X-Ray", date.today(), "Dr. Jamison", 500.00)
+    procedure3 = Procedure("Blood Test", date.today(), "Dr. Smith", 200.00)
+
+    #display information
+    print("Patient Information:")
+    print("First Name:", patient.get_first_name())
+    print("Middle Name:", patient.get_middle_name())
+    print("Last Name:", patient.get_last_name())
+    print("Address:", patient.get_address())
+    print("City:", patient.get_city())
+    print("State:", patient.get_state())
+    print("ZIP Code:", patient.get_zip_code())
+    print("Phone Number:", patient.get_phone_number())
+    print("Emergency Contact Name:", patient.get_emergency_contact_name())
+    print("Emergency Contact Phone:", patient.get_emergency_contact_phone())
+    print()
+
+    #display the procedure information
+    print("Procedures:")
+    procedures = [procedure1, procedure2, procedure3]
+    total_charges = 0
+    for procedure in procedures:
+        print(f"Procedure Name: {procedure.get_procedure_name()}")
+        print(f"Date: {procedure.get_date()}")
+        print(f"Practitioner: {procedure.get_practitioner()}")
+        print(f"Charges: ${procedure.get_charges():.2f}")
+        print()
+        total_charges += procedure.get_charges()
+
+    #display total charges
+    print(f"Total Charges: ${total_charges:.2f}")
+
+#run the program
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,37 @@
+# Car class
+class Car:
+    def __init__(self, year_model, make):
+        self.__year_model = year_model
+        self.__make = make
+        self.__speed = 0
+
+    #method to accelerate the car
+    def accelerate(self):
+        self.__speed += 5
+
+    #method to brake the car
+    def brake(self):
+        self.__speed -= 5
+
+    #method to get the current speed
+    def get_speed(self):
+        return self.__speed
+
+#program to test the Car class
+def main():
+    # Create a Car object
+    my_car = Car(2024, "Toyota")
+
+    #accelerate the car five times
+    for _ in range(5):
+        my_car.accelerate()
+        print(f"The current speed after accelerating is {my_car.get_speed()} mph")
+
+    #brake the car five times
+    for _ in range(5):
+        my_car.brake()
+        print(f"The current speed after braking is {my_car.get_speed()} mph")
+
+#test program
+if __name__ == "__main__":
+    main()
