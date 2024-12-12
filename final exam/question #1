@@ -1,0 +1,38 @@
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    #set the width of the rec
+    def set_width(self, width):
+        self.width = width
+
+    #get the width
+    def get_width(self):
+        return self.width
+
+    #set the height
+    def set_height(self, height):
+        self.height = height
+
+    #get the height
+    def get_height(self):
+        return self.height
+
+    #calculating the perimeter
+    def calculate_perimeter(self):
+        return 2 * (self.width + self.height)
+
+    #calculating the area
+    def calculate_area(self):
+        return self.width * self.height
+
+    #display the attributes
+    def display(self):
+        print("Width:", self.get_width())
+        print("Height:", self.get_height())
+        print("Perimeter:", self.calculate_perimeter())
+        print("Area:", self.calculate_area())
+if __name__ == "__main__": 
+    rect = Rectangle(5, 10) 
+    rect.display()
