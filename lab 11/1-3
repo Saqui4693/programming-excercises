@@ -1,0 +1,159 @@
+# employee class
+class Employee:
+    def __init__(self,name,number):
+        self.__name = name
+        self.__number = number
+    #accessor for employee name
+    def get_name(self):
+        return self.__name
+    #mutator for employee name
+    def set_name(self,name):
+        self.__name = name
+    #accesor for number
+    def get_number(self):
+        return self.__number
+    #muator for number
+    def set_number(self,number):
+        self.__number = number
+#productionworker subclass
+class ProductionWorker(Employee):
+    def __init__(self,name,number,shift,hourly_rate):
+        super().__init__(name,number)
+        self.__shift = shift
+        self.__hourly_rate = hourly_rate
+    #accessor for shift
+    def get_shift(self):
+        return self.__shift
+    #mutator for shift
+    def set_shift(self,shift):
+        self.__shift = shift
+    #accessor for hourly
+    def get_hourly_rate(self):
+        return self.__hourly_rate
+    #mutator for hourly
+    def set_hourly_rate(self,hourly_rate):
+        self.__hourly_rate = hourly_rate
+
+#program that creates an object
+def main():
+    #ask for employees details
+    name = input("Enter the employee's name: ")
+    number = input("Enter the employee's number: ")
+    shift= int(input("Enter the shift number (1 for day, 2 for night): "))
+    hourly_rate = float(input("Enter the hourly pay rate: "))
+
+    worker = ProductionWorker(name,number,shift,hourly_rate)
+
+    print("\nEmployee details: ")
+    print("Name:",worker.get_name())
+    print("Number:",worker.get_number())
+    print("Shift:",'Day' if worker.get_shift() ==1 else 'Night')
+    print("Hourly pay rate: $",format(worker.get_hourly_rate(),".2f"), sep='')
+
+main()
+
+# ShiftSupervisor subclass
+class ShiftSupervisor(Employee):
+    def __init__(self, name, number, annual_salary, annual_bonus):
+        super().__init__(name, number)
+        self.__annual_salary =annual_salary
+        self.__annual_bonus =annual_bonus
+
+    # accessor annual salary
+    def get_annual_salary(self):
+        return self.__annual_salary
+
+    # mutator annual salary
+    def set_annual_salary(self, annual_salary):
+        self.__annual_salary =annual_salary
+
+    # accessor for annual bonus
+    def get_annual_bonus(self):
+        return self.__annual_bonus
+
+    # mutator for annual bonus
+    def set_annual_bonus(self, annual_bonus):
+        self.__annual_bonus =annual_bonus
+
+    # display supervisor info
+    def display_supervisor_info(self):
+        super().get_name()
+        super().get_number()
+        print(f"Annual Salary: ${self.__annual_salary}")
+        print(f"Annual Production Bonus: ${self.__annual_bonus}")
+
+# program for shiftsupervisor
+def main():
+    #ShiftSupervisor object
+    supervisor = ShiftSupervisor("Sara Aquino", "1234", 80000, 5000)
+
+    # display information
+    print("\nShift Supervisor details:")
+    print("Name:", supervisor.get_name())
+    print("Number:", supervisor.get_number())
+    print("Annual Salary: $", format(supervisor.get_annual_salary(), ".2f"))
+    print("Annual Production Bonus: $", format(supervisor.get_annual_bonus(), ".2f"))
+
+main()
+
+#person class
+class Person:
+    def __init__(self, name, address, telephone):
+        self.__name =name
+        self.__address =address
+        self.__telephone =telephone
+
+    # accessor
+    def get_name(self):
+        return self.__name
+
+    def get_address(self):
+        return self.__address
+
+    def get_telephone(self):
+        return self.__telephone
+
+    # mutator 
+    def set_name(self, name):
+        self.__name = name
+
+    def set_address(self, address):
+        self.__address = address
+
+    def set_telephone(self, telephone):
+        self.__telephone = telephone
+
+# customer class
+class Customer(Person):
+    def __init__(self, name, address, telephone, customer_number, on_mailing_list):
+        super().__init__(name, address, telephone)
+        self.__customer_number =customer_number
+        self.__on_mailing_list =on_mailing_list
+
+    # accessor
+    def get_customer_number(self):
+        return self.__customer_number
+
+    def get_on_mailing_list(self):
+        return self.__on_mailing_list
+
+    # mutator
+    def set_customer_number(self, customer_number):
+        self.__customer_number =customer_number
+
+    def set_on_mailing_list(self, on_mailing_list):
+        self.__on_mailing_list =on_mailing_list
+
+# program
+def main():
+    # customer object
+    customer = Customer("Sara Aquino", "123 road", "456-7890", "5489", True)
+    # Display the customer's information
+    print("Customer details:")
+    print("Name:", customer.get_name())
+    print("Address:", customer.get_address())
+    print("Telephone:", customer.get_telephone())
+    print("Customer Number:", customer.get_customer_number())
+    print("On Mailing List:", "Yes" if customer.get_on_mailing_list() else "No")
+
+main()
