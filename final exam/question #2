@@ -1,0 +1,18 @@
+def count_frequencies(input_strings):
+    #empty dictionary for variables
+    frequency_dict = {}
+
+    #loop
+    for word in input_strings:
+        #if the word is in the dictionary
+        if word in frequency_dict:
+            frequency_dict[word] += 1
+        #if the word isnt in the dictionary
+        else:
+            frequency_dict[word] = 1
+
+    return frequency_dict
+
+input_strings = ["apple", "banana", "apple", "orange", "banana", "apple"]
+frequency_count = count_frequencies(input_strings)
+print("Frequency Count:", frequency_count)
