@@ -1,0 +1,17 @@
+def largest_item(lst, index=0, largest=None):
+    if index == len(lst):
+        return largest
+    
+    if largest is None:
+        largest = lst[index]
+    
+    if lst[index] > largest:
+        largest = lst[index]
+    
+    return largest_item(lst, index + 1, largest)
+
+user_input = input("Enter a list of numbers separated by spaces: ")
+lst = list(map(int, user_input.split()))
+
+print(f"The largest item in the list is: {largest_item(lst)}")
+

@@ -1,0 +1,11 @@
+def print_asterisks(n, current=1):
+    if current > n:
+        return
+    print('*' * current)
+    print_asterisks(n, current + 1)
+
+#run program
+n = 5
+print_asterisks(n)
+
+

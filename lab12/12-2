@@ -1,0 +1,15 @@
+def main():
+    #get 2 numbers
+    num1= int(input('Enter a number: '))
+    num2= int(input('Enter another number: '))
+
+    #display their product
+    print('Their product is',multiply(num1,num2))
+
+def multiply(x,y):
+    if x == 0 or y ==0:
+        return 0
+    else:
+        return x + multiply(x,y-1)
+    
+main()
